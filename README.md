@@ -78,7 +78,7 @@ docker compose ps
 
 首次创建 MySQL 数据卷时，`backend/sql/init.sql` 会自动创建数据库和三张数据表，并登记日志路径为 `/var/log/app/demo` 的示例服务。
 
-宿主机 `/var/log/app` 会只读挂载到后端容器的同一路径(/var/log/app)。真实服务建议分别写入子目录，例如：
+宿主机 `/var/log/app` 会只读挂载到后端容器的同一路径(/var/log/app)。真实服务建议分别写入宿主机指定日志目录的子目录，例如：
 
 ```text
 /var/log/app/user-service
@@ -86,7 +86,7 @@ docker compose ps
 /var/log/app/payment-service
 ```
 
-网页中填写相同的容器路径。后端只允许读取 `ALLOWED_LOG_ROOT` 指定目录下的文件。
+网页中填写相同的容器路径。后端只允许读取 `ALLOWED_LOG_ROOT` （默认是/var/log/app）指定目录下的文件。
 
 ## 配置
 
