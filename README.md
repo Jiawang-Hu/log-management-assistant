@@ -99,7 +99,7 @@ MYSQL_PASSWORD=change_this_password
 MYSQL_ROOT_PASSWORD=change_this_root_password
 ```
 
-`backend/.env.example` 是本地直接运行后端时的配置模板。真实 `.env` 已被 Git 忽略。
+`backend/.env.example` 是本地直接运行后端时的配置模板。真实 `.env` 需要自己配置。
 
 ## 支持的日志格式
 
